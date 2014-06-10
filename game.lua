@@ -3,7 +3,7 @@ game = {} --initialization
 Camera = require "camera"
 --require("AnAL")
 require ('level_1')
-local anim8 = require 'anim8'
+local anim = require 'anim'
 	local cam = Camera(0,0)
 	cam:zoom(.5)
 local image, playerRun,map
@@ -45,8 +45,8 @@ printf= "hit load"
 
 	 -- Load the animation source. as a variable called "img" locally
     playerSheet  = love.graphics.newImage("assets/ventrun.gif")		--playerRun = the sheet
-    local image = anim8.newGrid(47, 40, playerSheet:getWidth(), playerSheet:getHeight())
-	playerRun = anim8.newAnimation(image('1-10',1), 0.1)
+    local image = anim.newGrid(47, 40, playerSheet:getWidth(), playerSheet:getHeight())
+	playerRun = anim.newAnimation(image('1-10',1), 0.1)
    
    --//////////////////TILED BACKGROUND BOLLOCKS\\\\\\\\\\\\\\\\\\\\\\
 	tile = {}
